@@ -32,5 +32,5 @@ jobs:
   common-build:
     uses: ./.github/workflows/common_build.yml
     with:
-      message: ${{ inputs.message }} + ${{ env.MUSCLE_DOUBLE }}
+      message: ${{ inputs.message }}
       environment: ${{ inputs.environment }}
