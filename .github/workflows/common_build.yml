@@ -56,6 +56,6 @@ jobs:
         run: echo ${{ env.MUSCLE_MOST }}
       - name: My Custom Pose
         # ワークフローと同じリポジトリ、パブリックリポジトリ、または公開されているDockerコンテナーイメージで定義されているアクションを使用できる
-        uses: ./.github/actions/
+        uses: ./.github/actions/echo_pose
         with:
           message: "${{ env.MUSCLE_SIDE }}"
