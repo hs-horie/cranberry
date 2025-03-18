@@ -19,10 +19,6 @@ on:
         required: false
         type: string
         default: "大胸筋"
-    secrets:
-      token:
-        description: "secretsを表示"
-        required: false
 
   # コンソール上でワークフローの実行ができるようになる
   workflow_dispatch:
@@ -67,7 +63,5 @@ jobs:
           message: "やっぱり ${{ env.MUSCLE_SIDE }} だね"
       - name: What's this drink1?
         run: echo "${{ secrets.STRONGEST_DRINK }}" | base64
-      - name: What's this drink2?
-        uses: ./.github/actions/echo_pose
-        with:
-          token: ${{ secrets.token }}
+      - name: What's this drink1?
+        run: echo "${{ secrets.YOWA_DRINK }}" | base64
