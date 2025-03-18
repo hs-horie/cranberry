@@ -38,4 +38,4 @@ jobs:
     with:
       message: ${{ inputs.message }}
       environment: ${{ inputs.environment }}
-      token: ${{ secrets.YOWA_DRINK }}
+    secrets: inherit
