@@ -45,9 +45,10 @@ jobs:
     # 中で具体的なアクションを定義していく
     steps:
       # 任意のアクションの名前をつけれる
-      # run: の中には
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        # 最新のタグ4.2.2を使ってみる
+        # https://github.com/actions/checkout/tags
+        uses: actions/checkout@v4.2.2
       - name: Echo Message
         run: echo "${{ inputs.message }}"
       - name: Print Environment
