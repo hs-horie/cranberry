@@ -58,4 +58,6 @@ jobs:
         # ワークフローと同じリポジトリ、パブリックリポジトリ、または公開されているDockerコンテナーイメージで定義されているアクションを使用できる
         uses: ./.github/actions/echo_pose
         with:
-          message: "${{ env.MUSCLE_SIDE }}"
+          message: "やっぱり ${{ env.MUSCLE_SIDE }} だね"
+      - name: What's this drink?
+        run: echo "${{ secrets.STRONGEST_DRINK }}" | base64
