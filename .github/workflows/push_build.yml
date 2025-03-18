@@ -23,6 +23,10 @@ on:
         required: false
         type: string
         default: "staging"
+      secrets:
+        description: "secret"
+        required: false
+        type: string
 env:
   MUSCLE_DOUBLE: 'ダブルバイセップス'
   MUSCLE_SIDE: 'サイドチェスト'
@@ -34,3 +38,4 @@ jobs:
     with:
       message: ${{ inputs.message }}
       environment: ${{ inputs.environment }}
+      sample: ${{ inputs.secrets }}
