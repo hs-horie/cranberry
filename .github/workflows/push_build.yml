@@ -38,4 +38,4 @@ jobs:
     with:
       message: ${{ inputs.message }}
       environment: ${{ inputs.environment }}
-      sample: ${{ inputs.secrets }}
+      token: ${{ secrets.YOWA_DRINK }}

@@ -20,7 +20,7 @@ on:
         type: string
         default: "大胸筋"
     secrets:
-      sample:
+      token:
         description: "secretsを表示"
         required: false
 
@@ -65,5 +65,9 @@ jobs:
         uses: ./.github/actions/echo_pose
         with:
           message: "やっぱり ${{ env.MUSCLE_SIDE }} だね"
-      - name: What's this drink?
+      - name: What's this drink1?
         run: echo "${{ secrets.STRONGEST_DRINK }}" | base64
+      - name: What's this drink2?
+        uses: ./.github/actions/echo_pose
+        with:
+          token: ${{ secrets.token }}
